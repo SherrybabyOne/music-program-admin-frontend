@@ -9,3 +9,21 @@ export function fetchList(params) {
     method: 'GET'
   })
 }
+
+export function fetchById(params) {
+  return request({
+    params,
+    url: `${baseUrl}/playlist/getById`,
+    method: 'GET'
+  })
+}
+
+export function update(params) {
+  return request({
+    url: `${baseUrl}/playlist/updatePlaylist`,
+    data: {
+      ...params
+    },
+    method: 'POST'
+  })
+}
